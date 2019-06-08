@@ -1,0 +1,105 @@
+<html>
+  <head></head>
+  <body>
+    <% unless guess.nil? %>
+      <p>
+        <%= msg %>
+      <p>
+      <% if got_it %>
+        <p>
+          <table style="width:10%">
+            <tr>
+              <th>2</th>
+              <th>1</th>
+              <th>0</th>
+              <th>AND</th>
+              <th>OR</th>
+              <th>XOR</th>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>F</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>T</td>
+              <td>F</td>
+              <td>F</td>
+              <td>T</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+              <td>T</td>
+            </tr>  
+          </table>
+          <a href="/">Back to main page</a>
+        <p>
+      <% else %>
+        <p>
+        Try again!
+  <p>
+      <% end %>
+    <% end %>
+    <% unless got_it %>
+      <form>
+        True symbol:
+        <input type='text' name='guess' /><br>
+        False symbol:
+        <input type='text' name='guess' /><br>
+        Size (2^x):
+        <input type='text' name='guess' /><br>
+        <input type='submit' value='Show truth table' /><br>
+        <a href="/">Reload page</a>
+      </form>
+    <% end %>
+  </body>
+</html>
